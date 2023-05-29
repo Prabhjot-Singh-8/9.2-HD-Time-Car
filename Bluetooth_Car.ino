@@ -5,10 +5,10 @@
 char t;
 int sec;
 
-#define IN1 4
+#define IN1 2
 #define IN2 5
-#define IN3 6
-#define IN4 8
+#define IN3 4
+#define IN4 3
 
 void setup() 
 {
@@ -59,8 +59,6 @@ void moveForward(int duration)
   digitalWrite(IN2, HIGH);
   digitalWrite(IN3, HIGH);
   digitalWrite(IN4, LOW);
-  analogWrite(ENA, 255);
-  analogWrite(ENB, 255);
   delay(sec * 1000);
   stopCar();
 }
@@ -72,8 +70,6 @@ void moveBackward(int duration)
   digitalWrite(IN2, LOW);
   digitalWrite(IN3, LOW);
   digitalWrite(IN4, HIGH);
-  analogWrite(ENA, 255);
-  analogWrite(ENB, 255);
   delay(duration * 1000);
   stopCar();
 }
@@ -85,8 +81,6 @@ void turnLeft(int duration)
   digitalWrite(IN2, LOW);
   digitalWrite(IN3, HIGH);
   digitalWrite(IN4, LOW);
-  analogWrite(ENA, 200);
-  analogWrite(ENB, 200);
   delay(duration * 1000);
   stopCar();
 }
@@ -98,8 +92,6 @@ void turnRight(int duration)
   digitalWrite(IN2, HIGH);
   digitalWrite(IN3, LOW);
   digitalWrite(IN4, HIGH);
-  analogWrite(ENA, 200);
-  analogWrite(ENB, 200);
   delay(duration * 1000);
   stopCar();
 }
